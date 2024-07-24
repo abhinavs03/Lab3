@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* General styles */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url(./bg1.jpg);
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar{
+    backdrop-filter: blur(20px);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.grid-container{
+    margin: 15px;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    grid-column: 1 / span 1;
+}
+
+.sidebar {
+    grid-column: 2 / span 1;
+}
+
+/* Additional styles for team member images */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+img {
+    display: block;
+    width: 200px; /* Adjust size as needed */
+    height: 60px; /* Optional: Rounded image */
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+/* Pseudo-classes */
+
+article:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 5px;
+    }
+    section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand" href="#">Vacation Vista</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 1000px;">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gridgallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: transparent;backdrop-filter: blur(20px);">
+                            <a class="dropdown-item active" href="desc.html" style="background: transparent; color:#333">Description<span class="sr-only">(current)</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="serv.html" style="color: gray; background: transparent;">Services</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="grid-container" style="margin-top: 150px;">
+        <section class="grid-item about-text">
+            <h2>Welcome to Vacation Vista</h2>
+            <p>At Vacation Vista, we are passionate about curating unforgettable travel experiences tailored to your dreams. Whether you're seeking a serene beach retreat, an adventurous mountain escape, or a cultural exploration in bustling cities, we have the perfect itinerary waiting for you.
+            <p>Explore our meticulously crafted travel guides, packed with insider tips and hidden gems, to discover destinations that inspire wanderlust. From luxurious resorts to charming bed-and-breakfasts, we handpick accommodations that promise comfort and authenticity.</p>
+                Our commitment to excellence extends beyond destinations and accommodations. We strive to enhance your journey with practical travel advice, from packing essentials to local etiquette, ensuring a seamless and enriching vacation experience.
+                Join us at Vacation Vista, where every journey is an opportunity to create cherished memories and embark on new adventures. Let us guide you towards your next unforgettable vacation.</p>
+        </section>
+        <aside class="grid-item sidebar">
+            <h2>Associated Airlines</h2>
+            <ul>
+                <li>
+                    <img src="./airindia.png" alt="John Doe">
+                    <strong>Air India</strong>
+                </li>
+                <li>
+                    <img src="./fly.jpg" alt="Jane Smith">
+                    <strong>Fly Emirates</strong>
+                </li>
+                <li>
+                    <img src="./indigo.png" alt="Michael Johnson">
+                    <strong>Indigo Airlines</strong>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    
+
+    <footer style="margin-top: 113px;">
+        <p>&copy; 2024 Vacation Vista</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

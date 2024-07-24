@@ -1,0 +1,18 @@
+.container > div{
+    display: flex;
+    justify-content: content;
+    align-items: center;
+}
+
+.container > div > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.container > div > img:hover{
+    transform: scale(1.05); /* Move card up on hover */
+    box-shadow: 0 10px 15px #4682B4; /* Add shadow on hover */
+    transition: transform 0.7s;
+    opacity: 0.8;
+}

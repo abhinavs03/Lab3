@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* General styles */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url(./bg1.jpg);
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar{
+    backdrop-filter: blur(20px);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Flexbox and Grid examples */
+main.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service {
+    flex: 1 1 300px;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+
+.service:hover {
+    transform: scale(1.01); /* Move card up on hover */
+    box-shadow: 0 10px 15px #4682B4; /* Add shadow on hover */
+    transition: transform 0.9s; 
+}
+.service img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.service-details {
+    padding: 20px;
+}
+
+.service-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-details p {
+    margin-bottom: 15px;
+}
+
+.service-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+
+/* Pseudo-classes */
+
+article:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 5px;
+    }
+    section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand" href="#">Vacation Vista</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 1000px;">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gridgallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: transparent;backdrop-filter: blur(20px);">
+                            <a class="dropdown-item" href="desc.html" style="color: gray; background: transparent;">Description</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item active" href="serv.html" style="background: transparent; color:white">Services</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="services-container" style="margin-top: 100px;">
+        <section class="service">
+            <img src="./beach.jpg" alt="Beach Vacation">
+            <div class="service-details">
+                <h2>Beach Getaways</h2>
+                <p>Experience the ultimate relaxation with our curated beach vacations. From pristine sandy shores to crystal-clear waters, we offer destinations that redefine paradise.</p>
+                <ul>
+                    <li>Luxury beachfront resorts</li>
+                    <li>Snorkeling and diving excursions</li>
+                    <li>Guided beach tours</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="service">
+            <img src="./mount.jpg" alt="Mountain Retreats">
+            <div class="service-details">
+                <h2>Mountain Escapes</h2>
+                <p>Embark on an adventure amidst majestic mountains and breathtaking landscapes. Our mountain retreats promise serenity, outdoor activities, and stunning views.</p>
+                <ul>
+                    <li>Cozy mountain lodges</li>
+                    <li>Hiking and trekking adventures</li>
+                    <li>Scenic mountain tours</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="service">
+            <img src="./city.jpg" alt="City Exploration">
+            <div class="service-details">
+                <h2>City Explorations</h2>
+                <p>Discover vibrant cultures and bustling city life with our city exploration packages. Dive into history, cuisine, and urban adventures in iconic cities around the world.</p>
+                <ul>
+                    <li>Central accommodations</li>
+                    <li>City sightseeing tours</li>
+                    <li>Cultural experiences</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Vacation Vista</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* General styles */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url(./bg1.jpg);
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar{
+    backdrop-filter: blur(20px);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Flexbox and Grid examples */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+main h1{
+    font-size: 80px;
+    font-weight: 700;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Pseudo-classes */
+
+article:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 5px;
+    }
+    section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand" href="#">Vacation Vista</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 1000px;">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gridgallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: transparent;backdrop-filter: blur(20px);">
+                            <a class="dropdown-item" href="desc.html">Description</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="serv.html">Services</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h1 style="margin-top: 120px;">Vacation Vista</h1>
+            </article>
+        </section>
+    </main>
+    
+    <section class="jumbotron text-center bg-transparent" style="margin-top: -250px;">
+        <div class="container">
+            <h1 class="jumbotron-heading">Register here!</h1>
+            <p class="lead text-muted">Already a user? Then Login</p>
+            <p>
+                <a href="reg2.html" class="btn btn-primary my-2">Register</a>
+            </p>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Vacation Vista</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

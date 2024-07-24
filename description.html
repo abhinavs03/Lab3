@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset some default styling */
+/* Your existing CSS styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    grid-column: 1 / span 1;
+}
+
+.sidebar {
+    grid-column: 2 / span 1;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+/* Additional styles for team member images */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+img {
+    display: block;
+    width: 200px; /* Adjust size as needed */
+    height: 60px; /* Optional: Rounded image */
+    margin-bottom: 5px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <main class="grid-container">
+        <section class="grid-item about-text">
+            <h2>Welcome to Vacation Vista</h2>
+            <p>At Vacation Vista, we are passionate about curating unforgettable travel experiences tailored to your dreams. Whether you're seeking a serene beach retreat, an adventurous mountain escape, or a cultural exploration in bustling cities, we have the perfect itinerary waiting for you.
+            <p>Explore our meticulously crafted travel guides, packed with insider tips and hidden gems, to discover destinations that inspire wanderlust. From luxurious resorts to charming bed-and-breakfasts, we handpick accommodations that promise comfort and authenticity.</p>
+                Our commitment to excellence extends beyond destinations and accommodations. We strive to enhance your journey with practical travel advice, from packing essentials to local etiquette, ensuring a seamless and enriching vacation experience.
+                Join us at Vacation Vista, where every journey is an opportunity to create cherished memories and embark on new adventures. Let us guide you towards your next unforgettable vacation.</p>
+            <p>Nunc rutrum est eget tortor accumsan, at gravida libero luctus. Proin dignissim risus ut felis feugiat, in vestibulum orci pharetra.</p>
+        </section>
+        <aside class="grid-item sidebar">
+            <h2>Associated Airlines</h2>
+            <ul>
+                <li>
+                    <img src="./airindia.png" alt="John Doe">
+                    <strong>Air India</strong>
+                </li>
+                <li>
+                    <img src="./fly.jpg" alt="Jane Smith">
+                    <strong>Fly Emirates</strong>
+                </li>
+                <li>
+                    <img src="./indigo.png" alt="Michael Johnson">
+                    <strong>Indigo Airlines</strong>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
